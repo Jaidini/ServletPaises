@@ -10,10 +10,10 @@ public class UserAssembler {
 		User user = new User();
 		String nombre = req.getParameter("name");
 		String course = req.getParameter("course");
-		String dateOfBirth = req.getParameter("dob");
+		//String dateOfBirth = req.getParameter("dob");
 		user.setName(nombre);
-		user.setCourse(course);
-		user.setDateOfBirth(dateOfBirth);
+		user.setLanguaje(course);
+		
 		return user;
 	}
 }

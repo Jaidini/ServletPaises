@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.sql.Connection;
 import java.sql.SQLException;
 import java.util.Date;
+import java.util.List;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -13,6 +14,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import es.salesianos.connection.ConnectionH2;
 import es.salesianos.connection.ConnectionManager;
+import es.salesianos.model.Lenguaje;
 import es.salesianos.model.User;
 import es.salesianos.model.assembler.UserAssembler;
 import es.salesianos.service.Service;
@@ -24,9 +26,12 @@ public class WelcomeServlet extends HttpServlet{
 	
 	@Override
 	public void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		User user = service.assembleUserFromRequest(req);				
-		service.insertOrUpdate(user);		
-		service.calculateAgeAndAddIntoRequest(req, user.getDateOfBirth());
+		User user = service.assembleUserFromRequest(req);
+		Lenguaje lenguaje = service.assembleLenguaje(req);
+		service.insertOrUpdate(user, lenguaje);	
+		List<Lenguaje> listaIdiomas = service.listLenguaje();
+		req.setAttribute("listaIdiomas", listaIdiomas);
+
 		redirect(req,resp);
 	}
 

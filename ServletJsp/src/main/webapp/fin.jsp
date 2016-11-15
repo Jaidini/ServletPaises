@@ -4,13 +4,13 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
+<title>Esto Insertas</title>
 </head>
 <body>
 	<form action="volver" method="post">
 		<b><h1>Respuesta del formulario</h1></b>
 		<b>Nombre:&nbsp</b><%= request.getParameter("name") %><br>
-		<b>Edad:&nbsp</b><%= request.getAttribute("age") %><br>
+		<b>Idioma:&nbsp</b><%= request.getParameter("course") %><br>
 		<a href="datos.jsp"><input type="button" value="Volver"></a>
 		<a href="listado.jsp"><input type="button" value="Ver listado"></a>
 		

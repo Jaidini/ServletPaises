@@ -7,9 +7,8 @@ import java.util.Date;
 public class User {
 
 	private String name;
-	private String course;
-	private Date dateOfBirth;
-	private SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+	private String languaje;
+	
 
 	public String getName() {
 		return name;
@@ -19,29 +18,12 @@ public class User {
 		this.name = name;
 	}
 
-	public String getCourse() {
-		return course;
+	public String getLanguaje() {
+		return languaje;
 	}
 
-	public void setCourse(String course) {
-		this.course = course;
-	}
-
-	public Date getDateOfBirth() {
-		return dateOfBirth;
-	}
-
-	public void setDateOfBirth(Date dateOfBirth) {
-		this.dateOfBirth = dateOfBirth;
-	}
-
-	public void setDateOfBirth(String dateOfBirth) {
-
-		try {
-			this.dateOfBirth = sdf.parse(dateOfBirth);
-		} catch (ParseException e) {
-			throw new RuntimeException(e);
-		}
+	public void setLanguaje(String course) {
+		this.languaje = course;
 	}
 
 }

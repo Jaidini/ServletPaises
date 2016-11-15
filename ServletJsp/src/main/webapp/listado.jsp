@@ -10,11 +10,11 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
+<title>Lista de Idiomas</title>
 </head>
 <body>
 <form action="listado" method="post">
-	<h1>AQUÍ ESTÁ EL CONTENIDO DE LA BASE DE DATOS</h1>
+	<h1>AQUÍ ESTÁN LOS IDIOMAS</h1>
 	<input type="submit" value="Ver listado">
 	<a href="datos.jsp"><input type="button" value="Volver"></a>
 </form>
@@ -31,18 +31,16 @@
 <table border="1">
 	<thead>
 		<tr>
-			<td>Nombre</td>
-			<td>Fecha</td>
-			<td>Curso</td>
-			<td>Borrar Usuario</td>
+			<td>Idioma</td>
+			<td>País</td>
+			<td>Borrar Idioma</td>
 		</tr>
 	</thead>
 	<tbody>
 		<c:forEach var="user1" items="${listAllUsers}">
 			<tr>
-				<td><c:out value="${user1.name}"/> </td>
-				<td><c:out value="${user1.dateOfBirth}"/> </td>
-				<td><c:out value="${user1.course}"/> </td>
+				<td><c:out value="${user1.languaje}"/> </td>
+				<td><c:out value="${user1.name}"/></td>
 				<td><a name="user" href="volver?user=${user1.name}">Borrar</a></td>
 	    	</tr>
 		</c:forEach>

@@ -18,7 +18,7 @@ import es.salesianos.service.Repository;
 import es.salesianos.service.Service;
 import es.salesianos.utils.DateConverter;
 
-public class ComebackServlet extends HttpServlet{
+public class DeleteServlet extends HttpServlet{
 	
 	private Service servicio = new Service();
 	
