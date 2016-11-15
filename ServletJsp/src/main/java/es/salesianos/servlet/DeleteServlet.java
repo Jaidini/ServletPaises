@@ -24,11 +24,11 @@ public class DeleteServlet extends HttpServlet{
 	
 	@Override
 	public void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		/*String user = req.getParameter("user");
+		String user = req.getParameter("user");
 		req.setAttribute("nom", user);
 		
 		servicio.delete(user);
-		redirect(req,resp);*/
+		redirect(req,resp);
 	}
 	
 	@Override
@@ -41,7 +41,7 @@ public class DeleteServlet extends HttpServlet{
 	} 
 	
 	private void redirect(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
-		RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/confirmacion.jsp");
+		RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/listado.jsp");
 		dispatcher.forward(req,resp);
 	}
 	

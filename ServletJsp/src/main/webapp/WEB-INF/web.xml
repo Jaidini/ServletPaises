@@ -46,7 +46,7 @@
     </servlet-mapping>
     
     <servlet-mapping>
-    	<servlet-name>ComebackServlet</servlet-name>
+    	<servlet-name>DeleteServlet</servlet-name>
     	<url-pattern>borrar</url-pattern>
     </servlet-mapping>
     

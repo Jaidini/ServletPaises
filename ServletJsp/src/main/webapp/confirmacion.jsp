@@ -11,8 +11,10 @@
 		<b><h1>Página de Confirmación</h1></b>
 		<b>¿Está usted seguro de borrar el siguiente idioma? Tenga en cuenta que muchas personas se quedarían sin habla...</b><br>
 		
+		<input type="hidden" value="<%= request.getParameter("user") %>" name="user">
+		
 		<input type="submit" value="Sí">
-		<input type="submit" value="No">
+		<a href="listado.jsp"><input type="button" value="No"></a>
 	</form>
 	
 </body>

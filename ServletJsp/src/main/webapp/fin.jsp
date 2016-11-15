@@ -15,7 +15,7 @@
 		<a href="listado.jsp"><input type="button" value="Ver listado"></a>
 		
 		<input type="hidden" value="<%= request.getParameter("name") %>" name="user">
-		<input type="submit" value="Borrar">
+		
 	</form>
 	
 </body>

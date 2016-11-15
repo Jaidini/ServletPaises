@@ -33,11 +33,10 @@ public class ComebackServlet extends HttpServlet{
 	
 	@Override
 	public void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		/*String user = req.getParameter("user");
+		String user = req.getParameter("user");
 		req.setAttribute("nom", user);
 		
-		servicio.delete(user);
-		redirect(req,resp);*/
+		redirect(req,resp);
 	} 
 	
 	private void redirect(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
