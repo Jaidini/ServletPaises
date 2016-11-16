@@ -28,9 +28,11 @@ public class WelcomeServlet extends HttpServlet{
 	public void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		User user = service.assembleUserFromRequest(req);
 		Lenguaje lenguaje = service.assembleLenguaje(req);
-		service.insertOrUpdate(user, lenguaje);	
+		
 		List<Lenguaje> listaIdiomas = service.listLenguaje();
 		req.setAttribute("listaIdiomas", listaIdiomas);
+		
+		service.insertOrUpdate(user, lenguaje);
 
 		redirect(req,resp);
 	}

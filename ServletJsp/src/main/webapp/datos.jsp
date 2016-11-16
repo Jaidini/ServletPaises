@@ -23,7 +23,7 @@
 				<input type="text" name="name"></td>
 			</tr>
 			<tr>
-				<td><span>Tabla de idiomas:</span> 
+				<td><span>Tabla de idiomas:</span>
 				<select>
 					<option value="0">Idiomas...</option>
 					<tbody>
@@ -32,6 +32,8 @@
 						</c:forEach>
 					</tbody>
 				</select>
+				
+				</td>
 			</tr>
 			<tr>
 				<td><span>Introducir Idioma:</span> 

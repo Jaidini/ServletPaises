@@ -28,7 +28,7 @@
 <br/>
 
 
-<table border="1">
+<table border="1" align="center">
 	<thead>
 		<tr>
 			<td>Idioma</td>
