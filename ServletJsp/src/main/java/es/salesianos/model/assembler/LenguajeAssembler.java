@@ -8,8 +8,14 @@ public class LenguajeAssembler {
 
 	public static Lenguaje assembleUserFrom(HttpServletRequest req) {
 		Lenguaje lenguaje = new Lenguaje();
-		String nombre = req.getParameter("course");
-		lenguaje.setName(nombre);
+		String nombre1 = req.getParameter("idioma");
+		String nombre2 = req.getParameter("course");
+		
+		if(nombre1 == "0"){
+			lenguaje.setName(nombre2);
+		}else{
+			lenguaje.setName(nombre1);
+		}
 		
 		return lenguaje;
 	}

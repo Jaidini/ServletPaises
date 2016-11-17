@@ -27,12 +27,12 @@
 			</tr>
 			<tr>
 				<td><span>Tabla de idiomas:</span>
-				<select>
+				<select name="idioma" id="idioma">
 					<option value="0">Idiomas...</option>
 					<%
 						List<Lenguaje> listaIdiomas = new ArrayList<Lenguaje>();
 						listaIdiomas = Repository.listaLenguaje();
-						for(int i=0; i<listaIdiomas.size(); i++){
+						for(int i=1; i<listaIdiomas.size(); i++){
 							out.println("<option value='" + listaIdiomas.get(i).getName() + "'>" + listaIdiomas.get(i).getName());
 						}
 					%>

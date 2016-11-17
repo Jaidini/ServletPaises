@@ -10,7 +10,8 @@
 	<form action="volver" method="post">
 		<b><h1>Respuesta del formulario</h1></b>
 		<b>Nombre:&nbsp</b><%= request.getParameter("name") %><br>
-		<b>Idioma:&nbsp</b><%= request.getParameter("course") %><br>
+		<b>Idioma:&nbsp</b><%= request.getParameter("idioma") %><br>
+		<b>Idioma Nuevo Insertado:&nbsp</b><%= request.getParameter("course") %><br>
 		<a href="datos.jsp"><input type="button" value="Volver"></a>
 		<a href="listado.jsp"><input type="button" value="Ver listado"></a>
 		
