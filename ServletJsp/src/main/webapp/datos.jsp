@@ -1,6 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
     
+<%@page import="es.salesianos.model.Lenguaje"%>
+<%@page import="es.salesianos.service.Repository" %>
+
 <%@ page import="java.io.*,java.util.*,es.salesianos.model.*" %>
 
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
@@ -26,11 +29,13 @@
 				<td><span>Tabla de idiomas:</span>
 				<select>
 					<option value="0">Idiomas...</option>
-					<tbody>
-						<c:forEach var="idiomas" items="${listaIdiomas}">
-							<option><c:out value="${idiomas.nombreDelLenguaje}"/> </option>
-						</c:forEach>
-					</tbody>
+					<%
+						List<Lenguaje> listaIdiomas = new ArrayList<Lenguaje>();
+						listaIdiomas = Repository.listaLenguaje();
+						for(int i=0; i<listaIdiomas.size(); i++){
+							out.println("<option value='" + listaIdiomas.get(i).getName() + "'>" + listaIdiomas.get(i).getName());
+						}
+					%>
 				</select>
 				
 				</td>

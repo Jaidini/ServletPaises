@@ -18,7 +18,7 @@ import es.salesianos.utils.DateConverter;
 public class Repository {
 	
 	private static String jdbc = "jdbc:h2:file:./src/main/resources/test";
-	ConnectionManager manager = new ConnectionH2();
+	static ConnectionManager manager = new ConnectionH2();
 	
 	Connection conn = null;
 	
@@ -167,7 +167,7 @@ public class Repository {
 		manager.close(conn);
 	}
 	
-	public void close(PreparedStatement preparedStatement){
+	public static void close(PreparedStatement preparedStatement){
 		if(preparedStatement != null){
 			try{
 				preparedStatement.close();
@@ -179,7 +179,7 @@ public class Repository {
 		}
 	}
 	
-	public void close(ResultSet resultSet){
+	public static void close(ResultSet resultSet){
 		if(resultSet != null){
 			try{
 				resultSet.close();
@@ -217,7 +217,7 @@ public class Repository {
 		return listaADevolver;
 	}
 	
-	public List<Lenguaje> listaLenguaje(){
+	public static List<Lenguaje> listaLenguaje(){
 		List<Lenguaje> listaADevolver = new ArrayList<Lenguaje>();
 		Connection conn = manager.open(jdbc);
 		PreparedStatement preparedStatement = null;

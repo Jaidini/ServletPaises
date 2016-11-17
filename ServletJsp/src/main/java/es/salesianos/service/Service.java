@@ -60,10 +60,6 @@ public class Service {
 		return repositorio.searchAll();
 	}
 	
-	public List<Lenguaje> listLenguaje(){
-		return repositorio.listaLenguaje();
-	}
-	
 	public void delete(String user){
 		repositorio.deleteLenguaje(user);
 		repositorio.deletePaisDelLenguaje(user);
