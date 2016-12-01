@@ -34,8 +34,6 @@ public class Service {
 	}
 
 	public void insertOrUpdate(User user, Lenguaje lenguaje) {
-		 
-		
 		repositorio.createTable(sqlCrearPais);
 		repositorio.createTable(sqlCrearLanguaje);//Así creamos las tablas si todavía no existen
 		

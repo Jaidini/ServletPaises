@@ -14,11 +14,7 @@ public class UserAssembler {
 		String prueba = "";
 		
 		user.setName(nombre);
-		if(idioma == "0"){
-			user.setLanguaje(course);
-		}else{
-			user.setLanguaje(idioma);
-		}		
+		user.setLanguaje(idioma);		
 		prueba = user.getName();
 		return user;
 	}
